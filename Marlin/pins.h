@@ -29,18 +29,18 @@
 #define Z_MAX_PIN          -1 //30
 
 //actually E0 pins
-#define E2_STEP_PIN        40
-#define E2_DIR_PIN         41
-#define E2_ENABLE_PIN      37
+#define E2_STEP_PIN        43 //40
+#define E2_DIR_PIN         47 //41
+#define E2_ENABLE_PIN      42 //37
 
 #define E1_STEP_PIN        18
 #define E1_DIR_PIN         19
 #define E1_ENABLE_PIN      38
 
 //actually E2 pins
-#define E0_STEP_PIN        43
-#define E0_DIR_PIN         47
-#define E0_ENABLE_PIN      42
+#define E0_STEP_PIN        40 //43
+#define E0_DIR_PIN         41 //47
+#define E0_ENABLE_PIN      37 //42
 
 #define SDPOWER            -1
 #define LED_PIN            16 //5V PWM
@@ -102,6 +102,12 @@
 
 #define BLEN_B 1
 #define BLEN_A 0
+
+//variables for which pins the TLC5947 is using
+#define TLC_CLOCK_PIN 25
+#define TLC_BLANK_PIN 23
+#define TLC_XLAT_PIN 22
+#define TLC_DATA_PIN 24
 
 #endif //RA Panel
 

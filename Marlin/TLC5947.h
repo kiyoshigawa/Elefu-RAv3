@@ -15,12 +15,7 @@ It is also assuming you're using our TLC5947 RGB Add-On Board
 //change this to match your situation. Lots of TLCs takes up the arduino SRAM very quickly, so be careful
 #define NUM_TLCS 2 //the number of TLC5947 boards chained together for use with the animation, additional ones will repeat the animation on them, but are not individually addressable and mimic those before them.
 
-
-//variables for which pins the TLC5947 is using
-const int TLC_CLOCK_PIN = 38;
-const int TLC_BLANK_PIN = 19;
-const int TLC_XLAT_PIN = 42;
-const int TLC_DATA_PIN = 18;
+//the TLC pins have been moved to the pins.h file for use with Marlin.
 
 #define NUM_TLC5947_RGBS 8 //8 RGB LEDs per TLC5947 board
 #define PWM_BITS 12 // number of bits per channel on the TLC5947

@@ -12,27 +12,12 @@ It is also assuming you're using our TLC5947 RGB Add-On Board
 //allows offloading of constant variables to the flash memory
 #include <avr/pgmspace.h>
 
-//change this to match your situation. Lots of TLCs takes up the arduino SRAM very quickly, so be careful
-#define NUM_TLCS 2 //the number of TLC5947 boards chained together for use with the animation, additional ones will repeat the animation on them, but are not individually addressable and mimic those before them.
-
 //the TLC pins have been moved to the pins.h file for use with Marlin.
 
 #define NUM_TLC5947_RGBS 8 //8 RGB LEDs per TLC5947 board
 #define PWM_BITS 12 // number of bits per channel on the TLC5947
 #define UPDATE_DELAY 0 //minimum number of ms between updates
 
-//First we need to define pin to port number mapping for the 2560
-#define TLC_CLOCK_BIT 7 //bit 7 on port D
-#define TLC_CLOCK_PORT &PORTD //bit 7 on port D
-
-#define TLC_BLANK_BIT 2 //bit 2 on port D
-#define TLC_BLANK_PORT &PORTD //bit 2 on port D
-
-#define TLC_DATA_BIT 3 //bit 3 on port D
-#define TLC_DATA_PORT &PORTD //bit 4 on port D
-
-#define TLC_XLAT_BIT 7 //bit 7 on port L
-#define TLC_XLAT_PORT &PORTL //bit 7 on port L
 
 //Pins A6 and A7 cannot be used, as they are analog inputs only.
 

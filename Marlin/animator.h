@@ -254,6 +254,7 @@ void animator::random_fader_control(){
 
 //call this function in the arduino setup function to initialize the animation
 void animator::init(){
+
 	//declare pins as inpus/outputs
 	pinMode(TLC_CLOCK_PIN, OUTPUT);
 	pinMode(TLC_BLANK_PIN, OUTPUT);

@@ -109,6 +109,24 @@
 #define TLC_XLAT_PIN 22
 #define TLC_DATA_PIN 24
 
+//We also need to define pin to port number mapping for the 2560 to match the pins listed above. If you change the TLC pins, update this as well per the 2560 datasheet!
+#define TLC_CLOCK_BIT 3 //bit 7 on port D
+#define TLC_CLOCK_PORT &PORTA //bit 7 on port D
+
+#define TLC_BLANK_BIT 1 //bit 2 on port D
+#define TLC_BLANK_PORT &PORTA //bit 2 on port D
+
+#define TLC_DATA_BIT 2 //bit 3 on port D
+#define TLC_DATA_PORT &PORTA //bit 4 on port D
+
+#define TLC_XLAT_BIT 0 //bit 7 on port L
+#define TLC_XLAT_PORT &PORTA //bit 7 on port L
+
+//change this to match your situation. Lots of TLCs takes up the arduino SRAM very quickly, so be careful - Leave it at at least 1, or you'll have to comment out the #include for the library.
+//If you change this to something other than two (or even if you don't), check the TRANS_ARRAY in TLC5947.h and modify it to change the order your RGBs will be displayed for animation purposes.
+#define NUM_TLCS 2 //the number of TLC5947 boards chained together for use with the animation, additional ones will repeat the animation on them, but are not individually addressable and mimic those before them.
+
+
 #endif //RA Panel
 
 
